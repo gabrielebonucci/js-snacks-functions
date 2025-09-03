@@ -9,9 +9,34 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+function sayHello(name, hour) {
+    
+    let greeting;
+    
+    if (hour < 13) {
+        greeting = 'Buongiorno';
 
+    } else if (hour <= 17) {
 
+    greeting = 'Buon pomeriggio';
+
+  } else {
+    greeting = 'Buonasera';
+  }
+    
+    return `${greeting} ${name}.`;
+
+}
 // Invoca la funzione qui e stampa il risultato in console
+const greetingForEvening = sayHello('Mario', 18);
+console.log(greetingForEvening);
+
+const greetingForAfternoon = sayHello('Paolo', 15);
+console.log(greetingForEvening);
+
+
+const greetingForMorning = sayHello('Laura', 10);
+console.log(greetingForEvening);
 
 
 
